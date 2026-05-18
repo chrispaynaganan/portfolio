@@ -1,7 +1,9 @@
-import { services } from '../data/services'
+import servicesData from '../data/services.json'
 import ServiceCard from '../components/ServiceCard'
 import SectionHeader from '../components/SectionHeader'
 import styles from './ServicesOfferings.module.css'
+
+const services = servicesData.services
 
 function ServicesOfferings() {
   return (

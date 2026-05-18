@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { faqs } from '../data/faqs'
+import faqs from '../data/faqs.json'
 import CTASection from '../components/CTASection'
 import styles from './FAQ.module.css'
 
