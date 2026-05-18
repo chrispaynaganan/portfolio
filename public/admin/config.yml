@@ -2,7 +2,7 @@ backend:
   name: github
   repo: chrispaynaganan/portfolio
   branch: main
-  base_url: https://decap-proxy.netlify.app
+   base_url: https://cms-oauth-nine.vercel.app
 
 media_folder: src/assets/images
 public_folder: /src/assets/images
