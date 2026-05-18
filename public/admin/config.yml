@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: chrispaynaganan/portfolio
+  branch: main
+
+media_folder: src/assets/images
+public_folder: /src/assets/images
+
+# Use Decap's implicit OAuth via GitHub (no Netlify needed)
+local_backend: false
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    files:
+      - label: All Projects
+        name: projects
+        file: src/data/projects.js
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Slug, name: slug, widget: string, hint: "URL-friendly name e.g. my-project" }
+              - { label: Category, name: category, widget: string }
+              - { label: Short Description, name: shortDescription, widget: text }
+              - { label: Full Description, name: description, widget: markdown }
+              - { label: Cover Image, name: image, widget: image, required: false }
+              - { label: Live URL, name: liveUrl, widget: string, required: false }
+              - { label: GitHub URL, name: githubUrl, widget: string, required: false }
+              - label: Tags
+                name: tags
+                widget: list
+                field: { label: Tag, name: tag, widget: string }
+              - { label: Featured, name: featured, widget: boolean, default: false }
+              - { label: Archived, name: archived, widget: boolean, default: false, hint: "Hide from public listing" }
+              - { label: Year, name: year, widget: number }
+
+  - name: services
+    label: Services
+    label_singular: Service
+    files:
+      - label: All Services
+        name: services
+        file: src/data/services.js
+        fields:
+          - label: Services
+            name: services
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Icon, name: icon, widget: string, hint: "Icon name from your icons set" }
+              - label: Features
+                name: features
+                widget: list
+                field: { label: Feature, name: feature, widget: string }
+
+  - name: faqs
+    label: FAQs
+    label_singular: FAQ
+    files:
+      - label: All FAQs
+        name: faqs
+        file: src/data/faqs.js
+        fields:
+          - label: FAQs
+            name: faqs
+            widget: list
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: text }
+
+  - name: nav
+    label: Navigation
+    files:
+      - label: Nav Links
+        name: nav
+        file: src/data/nav.js
+        fields:
+          - label: Links
+            name: links
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Path, name: path, widget: string }

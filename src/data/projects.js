@@ -18,6 +18,7 @@ export const projects = [
       'Designed and strategized the user experience for a shift management platform, creating intuitive workflows and scalable design systems to enhance scheduling efficiency.',
     thumbnail: cishiftsDesktop,
     tags: ['Branding', 'Web Design'],
+    archived: false,
     problem: {
       text: 'CIShifts was built to fix a real operational failure in healthcare staffing. Clinics and agencies were managing scheduling, billing, staffing, and communication across disconnected tools — WellSky, Salesforce, Google Workspace, Monday, ADP — forcing teams to constantly switch contexts just to fill a shift. In a system where timing directly affects patient care, that fragmentation had consequences.',
       bullets: [
@@ -207,6 +208,7 @@ export const projects = [
     'A modern web design concept that transforms the school publication into an interactive digital platform. With responsive layouts, real-time updates, and multimedia storytelling, it enhances content creation and engagement, making campus journalism more accessible and dynamic.',
   thumbnail: tbjDesktop,
   tags: ['Branding', 'Web Design'],
+    archived: false,
   problem: {
     text: 'The college publication had been relying solely on printed newspapers and Facebook posts for news distribution. Over time, this led to two major issues: loss of old records and fragmented communication. Past issues were either misplaced, damaged, or simply inaccessible. Meanwhile, multiple departments began creating their own Facebook pages for announcements, resulting in inconsistent and confusing information for students and faculty.',
     bullets: [
@@ -363,6 +365,7 @@ export const projects = [
     thumbnail: bpThumbnail,
     heroImage: bpCover,
     tags: ['Branding', 'Web Design'],
+    archived: false,
     problem: {
       text: 'Voiceover artists depend heavily on platforms like Fiverr and Voices.com for visibility. The tradeoff is control — over how their work is presented, how their brand is perceived, and how they\'re discovered. In a marketplace, every artist looks roughly the same. There\'s no room to tell a story, establish credibility, or own the relationship with a client.',
       bullets: [
@@ -517,6 +520,7 @@ export const projects = [
     thumbnail: resonateThumbnail,
     heroImage: resonateHero,
     tags: ['Branding', 'Web Design'],
+    archived: false,
     problem: {
       text: 'Despite strong experience as both a voice coach and voiceover artist, Erwin had no structured online presence that translated that expertise into visible, actionable credibility. His current footprint doesn\'t clearly position him as a coach, doesn\'t centralize his work, and offers no pathway for interested users to take the next step. The gap isn\'t talent. It\'s the distance between what he can do and what someone finds when they search for him.',
       bullets: [
@@ -682,6 +686,7 @@ export const projects = [
     thumbnail: sailswipeThumbnail,
     heroImage: sailswipeHero,
     tags: ['Mobile App', 'Branding'],
+    archived: false,
     problem: {
       text: 'SailSwipe originally served yacht owners, crew members, and travelers through a single web-based platform. As features expanded without a clear structure, the experience became harder to navigate. Users relied on the platform for time-sensitive tasks — finding port details, connecting with crew, discovering opportunities — but the interface made each of these harder than it needed to be.',
       bullets: [],
@@ -823,6 +828,7 @@ export const projects = [
     thumbnail: hustleThumbnail,
     heroImage: hustleHero,
     tags: ['Branding', 'Web Design'],
+    archived: false,
     problem: {
       text: 'Hustle & Muscle Fitness operated as a 24/7 gym but relied entirely on Facebook as its primary customer touchpoint. While the business was highly responsive, this created a dependency on constant manual interaction to handle inquiries, signups, and bookings. As demand increased, this approach became inefficient and difficult to scale.',
       bullets: [
@@ -972,3 +978,4 @@ export const projects = [
     images: [],
   },
 ]
+export default projects;

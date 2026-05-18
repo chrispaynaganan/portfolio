@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import { projects } from '../data/projects'
+import projects from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
 import styles from './ProjectsPreview.module.css'
 
 function ProjectsPreview() {
-  const featured = projects.slice(0, 3)
+  const featured = projects.filter((p) => !p.archived).slice(0, 3)
 
   return (
     <section className={styles.section}>

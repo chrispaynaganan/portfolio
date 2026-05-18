@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { projects } from '../data/projects'
+import projects from '../data/projects'
+
+const activeProjects = projects.filter((p) => !p.archived)
 import ProjectCard from '../components/ProjectCard'
 import styles from './ProjectsGrid.module.css'
 
@@ -11,12 +13,12 @@ function getAllTags(projects) {
 function ProjectsGrid() {
   const [activeTag, setActiveTag] = useState('All')
 
-  const tags = getAllTags(projects)
+  const tags = getAllTags(activeProjects)
 
   const filtered =
     activeTag === 'All'
-      ? projects
-      : projects.filter((p) => p.tags.includes(activeTag))
+      ? activeProjects
+      : activeProjects.filter((p) => p.tags.includes(activeTag))
 
   return (
     <section className={styles.section}>

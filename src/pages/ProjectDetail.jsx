@@ -1,5 +1,5 @@
 import { useParams, NavLink } from 'react-router-dom'
-import { projects } from '../data/projects'
+import projects from '../data/projects'
 import TabPanel from '../components/TabPanel'
 import OverviewTab from '../components/OverviewTab'
 import ContextTab from '../components/ContextTab'
@@ -15,7 +15,7 @@ import styles from './ProjectDetail.module.css'
 
 function ProjectDetail() {
   const { id } = useParams()
-  const project = projects.find((p) => p.id === id)
+  const project = projects.filter((p) => !p.archived).find((p) => p.id === id)
 
   if (!project) {
     return (
@@ -73,7 +73,7 @@ function ProjectDetail() {
     },
   ]
 
-  const moreProjects = projects.filter((p) => p.id !== project.id).slice(0, 3)
+  const moreProjects = projects.filter((p) => !p.archived && p.id !== project.id).slice(0, 3)
   const problem = typeof project.problem === 'object' ? project.problem : { text: project.problem, bullets: [], callout: '' }
 
   // Pull role and timeline from meta if available
